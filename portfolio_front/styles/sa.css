@@ -1,0 +1,96 @@
+.selecionar-conteudo {
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cabecalho {
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.container-cursos {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Aumentei o espaçamento entre os cards */
+    margin-bottom: 40px; /* Espaço no final */
+}
+
+.cartao-curso {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.175);
+    width: 100%;
+    padding: 25px;
+    transition: transform 0.3s;
+    min-height: 180px; /* Altura mínima consistente */
+}
+
+.dois { background-color: #80aae9; }
+
+.cartao-curso:hover {
+    transform: translateY(-8px);
+    transition: 0.2s ease-in-out;
+}
+
+.titulo-curso {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.descricao-curso {
+    color: #1d1d1d;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.autor-curso {
+    color: #7f8c8d;
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Área de botões dentro do card - CORRIGIDA */
+.acoes-curso {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.botao-acao {
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    width: 40px; /* Aumentei para ficar mais visível */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.botao-acao:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.seta {
+    color: white;
+    font-size: 20px;
+
+}

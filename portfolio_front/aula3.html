@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/exercicios.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Resumo: Arrays em JavaScript</title>
+    <style>
+        .pagina-aula {
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .container-aula {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .titulo-aula {
+            color: var(--branco);
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--azul-claro);
+            font-size: 30px;
+        }
+        
+        .content-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .card {
+            background-color: var(--containers);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px var(--sombra);
+        }
+        
+        .card h2 {
+            color: var(--branco);
+            margin-top: 0;
+            padding-bottom: 10px;
+        }
+        
+        .card h3 {
+            color: var(--preto);
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: var(--texto);
+        }
+        
+        code {
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            font-family: "Poppins", serif;
+            color: var(--preto);
+        }
+        
+        .highlight {
+            background-color: var(--cor-destaque);
+            padding: 15px;
+            border-left: 4px solid #0e203a;
+            border-radius: 0 4px 4px 0;
+            margin: 15px 0;
+        }
+        
+        .operator-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .operator {
+            padding: 8px;
+            text-align: center;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .destaque, .operator {
+            background-color: var(--cor-destaque);
+        }        
+        
+        .method {
+            margin: 10px 0;
+            padding: 10px;
+            background: #e8f4fc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="pagina-aula">
+
+    <section class="container-aula">
+        <h1 class="titulo-aula">Arrays em JavaScript</h1>
+        
+        <div class="content-column">
+
+            <div class="card">
+                <h2>Tipos de Variáveis</h2>
+                
+                <p><code class="destaque">let</code> - Variáveis locais, disponíveis apenas no bloco de instrução</li>></p>
+                <div class="highlight">
+                    <p><strong>Exemplo:</strong><code>let nome = "João";</code></p>
+                </div>
+
+                <p><code class="destaque">const</code> - Valores fixos que não podem ser alterados</li>></p>
+                <div class="highlight">
+                    <p><strong>Exemplo:</strong><code>const PI = 3.14;</code></code></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Arrays</h2>
+                
+                <div class="highlight">
+                    <pre><code>const numeros = [10, 20, 30, 40, 50];</code></pre>
+                    <pre><code>const nomes = ["Ana", "Carlos", "Maria"];</code></pre>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Manipulação de Arrays</h2>
+                <div class="method">
+                    <p><strong>push()</strong> - Adiciona no final</p>
+                    <code>numeros.push(60); // [10, 20, 30, 40, 50, 60]</code>
+                </div>
+
+                <div class="method">
+                    <p><strong>pop()</strong> - Remove do final</p>
+                    <code>numeros.pop(); // [10, 20, 30, 40]</code>
+                </div>
+
+                <div class="method">
+                    <p><strong>unshift()</strong> - Adiciona no início</p>
+                    <code>numeros.unshift(0); // [0, 10, 20, 30, 40, 50]</code>
+                </div>
+
+                <div class="method">
+                    <p><strong>shift()</strong> - Remove do início</p>
+                    <code>numeros.shift(); // [20, 30, 40, 50]</code>
+                </div>
+
+                <div class="method">
+                    <p><strong>splice()</strong> - Remove/insere em posição específica</p>
+                    <code>numeros.splice(2, 1); // Remove 1 item na posição 2</code>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Métodos Avançados</h2>
+                <div class="method">
+                    <p><strong>forEach()</strong> - Executa função para cada elemento</p>
+                    <pre><code>numeros.forEach(num => {
+                console.log(num);
+            });</code></pre>
+                </div>
+     
+                <div class="method">
+                    <p><strong>map()</strong> - Transforma array em novo array</p>
+                    <pre><code>const dobros = numeros.map(num => num * 2);</code></pre>
+                </div>
+
+                <div class="method">
+                    <p><strong>filter()</strong> - Filtra elementos</p>
+                    <pre><code>const pares = numeros.filter(num => num % 2 === 0);</code></pre>
+                </div>
+                
+                <div class="method">
+                    <p><strong>reduce()</strong> - Reduz a um valor único</p>
+                    <pre><code>const soma = numeros.reduce((total, num) => total + num, 0);</code></pre>
+                </div>
+            </div>   
+        </div>
+    </section>
+
+    <section id="test">
+        <h2 class="titulos-exercicios">EXERCÍCIOS</h2>
+
+        <div class="slider">
+
+            <!-- Exercício 1 -->
+            <div class="item l3-ex1">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 1</h3>
+                    <h6>Dobro de um número</h6>
+                </div>
+
+                <form id="l3-ex1-input">
+                    <div class="test">
+                        <input type="number" id="numeros" placeholder="Digite 5 números">
+                        <input id="adicionar" class="botao" type="submit" value="Adicionar">
+                    </div>
+                
+                    <input id="calcular" class="botao" type="submit" value="Calcular">
+                </form>
+                <p id="resultado_dobro"></p>
+            </div>
+
+
+            <!-- Exercício 2 -->
+            <div class="item l3-ex2">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 2</h3>
+                    <h6>Média aritmética</h6>
+                </div>
+
+                <form id="l3-ex2-input">
+                    <div class="test">
+                        <input type="number" id="numeros_media" placeholder="Digite 8 números">
+                        <input id="adicionar" class="botao" type="submit" value="Adicionar">
+                    </div>
+                
+                    <input id="calcular" class="botao" type="submit" value="Calcular">
+                </form>
+                <p id="resultado_media"></p>  
+            </div>
+
+            <!-- Exercício 3 -->
+            <div class="item l3-ex3">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 3</h3>
+                    <h6>Idades acima da média</h6>
+                </div>
+
+                <form id="l3-ex3-input">
+                    <div class="test">
+                        <input type="number" id="idade" placeholder="Digite 20 idades">
+                        <input id="adicionar" class="botao" type="submit" value="Adicionar">
+                    </div>
+                    <input id="calcular" class="botao" type="submit" value="Calcular">
+                </form>
+                <p id="resultado_acima_media"></p>
+            </div>
+
+            <!-- Exercício 4 -->
+            <div class="item l3-ex4">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 4</h3>
+                    <h6>Verificar Pares</h6>
+                </div>
+
+                <form id="l3-ex4-input">
+                    <div class="test">
+                        <input type="number" id="numero_par_impar" placeholder="Digite 10 números">
+                        <input id="adicionar" class="botao" type="submit" value="Adicionar">
+                    </div>
+                    <input id="verificar" class="botao" type="submit" value="Verificar">
+                </form>
+                <p id="resultado_pares"></p>
+            </div>
+
+            <!-- Exercício 5 -->
+            <div class="item l3-ex5">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 5</h3>
+                    <h6>Números entre 100 e 200</h6>
+                </div>
+
+                <form id="l3-ex5-input">
+                    <div class="test">
+                        <input type="number" id="numero_validos" placeholder="Digite 10 números">
+                        <input id="adicionar" class="botao" type="submit" value="Adicionar">
+                    </div>
+                    <input id="verificar" class="botao" type="submit" value="Verificar">
+                </form>
+                <p id="numeros_validos"></p>
+            </div>
+
+            <!-- Exercício 6 -->
+            <div class="item l3-ex6">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 6</h3>
+                    <h6>Verificar nomes de uma lista</h6>
+                </div>
+
+                <form id="l3-ex6-input">
+                    <div>
+                        <label >Digite um nome: </label>
+                        <input type="text" id="nome"">
+                    </div>
+                    <input class="botao" type="submit" value="Verificar">
+                </form>
+                <p id="resultado_nome"></p>   
+            </div>
+
+            <!-- Exercício 7 -->
+            <div class="item l3-ex7">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 7</h3>
+                    <h6>Tente adivinhar os nomes da lista</h6>
+                </div>
+
+                <form id="l3-ex7-input">
+                    <div>
+                        <label >Digite um nome: </label>
+                        <input type="text" id="nome_chute">
+                    </div>
+                    <input class="botao" type="submit" value="Verificar">
+                </form>
+                <p id="resultado_chute"></p>
+                <p>Tentativas: <span id="tentativas">5</span></p>                
+            </div>
+
+            <!-- Exercício 8 -->
+            <div class="item l3-ex8">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 8</h3>
+                    <h6>Tente adivinhar os nomes da lista</h6>
+                </div>
+
+                <form id="l3-ex8-input">
+                    <div>
+                        <label>Digite um número:</label>
+                        <input type="text" id="numero_a" />
+                    </div>
+                    <input class="botao" type="submit" value="Adicionar">
+                </form>
+                <p id="resultado"></p>               
+            </div>
+
+            <!-- Exercício 9 -->
+            <div class="item l3-ex9">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 9</h3>
+                    <h6>Tente adivinhar os nomes da lista</h6>
+                </div>
+
+                <form id="l3-ex9-input">
+                    <div>
+                        <label>Digite um número:</label>
+                        <input type="text" id="numero_aEb">
+                    </div>
+                    <input class="botao" type="submit" value="Adicionar">
+                </form>
+                <p id="resultado_vetores"></p>
+                <p id="vetores"></p>
+            </div>
+
+            <button id="prev">Anterior</button>
+            <button id="next">Próximo</button>
+        </div>
+    </section>
+
+    <script src="scripts/exercicios/lista3/L3-ex01.js"></script>
+    <script src="scripts/exercicios/lista3/L3-ex02.js"></script>
+    <script src="scripts/exercicios/lista3/L3-ex03.js"></script>
+    <script src="scripts/exercicios/lista3/L3-ex04.js"></script>
+    <script src="scripts/exercicios/lista3/L3-ex05.js"></script>
+    <script src="scripts/exercicios/lista3/L3-ex06.js"></script>
+    <script src="scripts/exercicios/lista3/L3-ex07.js"></script>
+    <script src="scripts/exercicios/lista3/L3-ex08.js"></script>
+    <script src="scripts/exercicios/lista3/L3-ex09.js"></script>
+    <script src="scripts/carrossel.js"></script>
+</body>
+</html>

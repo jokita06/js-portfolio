@@ -1,0 +1,10 @@
+:root {    
+    --texto: #e6effb;
+    --azul-escuro: #0e203a;
+    --containers: rgb(52, 90, 143);
+    --cor-destaque: #aeceff;
+    --azul-claro: #80aae9;
+    --branco: white;
+    --preto: black;
+    --sombra: rgba(0,0,0,0.15);
+}

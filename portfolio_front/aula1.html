@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1</title>
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/exercicios.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .pagina-aula {
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .container-aula {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .titulo-aula {
+            color: var(--branco);
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--azul-claro);
+            font-size: 30px;
+        }
+        
+        .content-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .card {
+            background-color: var(--containers);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px var(--sombra);
+        }
+        
+        .card h2 {
+            color: var(--branco);
+            margin-top: 0;
+            padding-bottom: 10px;
+        }
+        
+        .card h3 {
+            color: var(--preto);
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: var(--texto);
+        }
+        
+        code {
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            font-family: "Poppins", serif;
+            color: var(--preto);
+        }
+        
+        .highlight {
+            background-color: var(--cor-destaque);
+            padding: 15px;
+            border-left: 4px solid #0e203a;
+            border-radius: 0 4px 4px 0;
+            margin: 15px 0;
+        }
+        
+        .operator-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .operator {
+            padding: 8px;
+            text-align: center;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .destaque, .operator {
+            background-color: var(--cor-destaque);
+        }
+        
+    </style>
+</head>
+<body class="pagina-aula">
+
+    <section class="container-aula">
+        <h1 class="titulo-aula">Comandos básicos JavaScript</h1>
+        
+        <div class="content-column">
+            <!-- História -->
+            <div class="card">
+                <h2>História do JavaScript</h2>
+                <ul>
+                    <li>Páginas web eram estáticas no início (HTML puro)</li>
+                    <li>Netscape criou o Livescript (renomeado para JavaScript)</li>
+                    <li>Tornou-se a linguagem mais popular para web</li>
+                    <li>Suportada por todos os navegadores modernos</li>
+                </ul>
+            </div>
+            
+            <!-- Componentes Front-End -->
+            <div class="card">
+                <h2>Componentes do Front-End</h2>
+                <div class="highlight">
+                    <h3>HTML</h3>
+                    <p>Estrutura e conteúdo das páginas</p>
+                    
+                    <h3>CSS</h3>
+                    <p>Estilização e aparência visual</p>
+                    
+                    <h3>JavaScript</h3>
+                    <p>Interatividade e dinamismo</p>
+                </div>
+            </div>
+            
+            <!-- Interação com Usuário -->
+            <div class="card">
+                <h2>Interação com Usuário</h2>
+                <h3>Funções Básicas</h3>
+                <ul>
+                    <li><code class="destaque">alert()</code> - Exibe mensagens</li>
+                    <li><code class="destaque">prompt()</code> - Solicita entrada</li>
+                    <li><code class="destaque">confirm()</code> - Confirmação Sim/Não</li>
+                </ul>
+                <div class="highlight">
+                    <p><strong>Exemplo:</strong> <code>let nome = prompt("Qual seu nome?");</code></p>
+                </div>
+            </div>
+            
+            <!-- Operadores -->
+            <div class="card">
+                <h2>Operadores</h2>
+                
+                <h3>Aritméticos</h3>
+                <div class="operator-grid">
+                    <div class="operator">+ (adição)</div>
+                    <div class="operator">- (subtração)</div>
+                    <div class="operator">* (multiplicação)</div>
+                    <div class="operator">/ (divisão)</div>
+                    <div class="operator">% (módulo)</div>
+                    <div class="operator">** (exponenciação)</div>
+                </div>
+                
+                <h3>Relacionais</h3>
+                <div class="operator-grid">
+                    <div class="operator">> (maior)</div>
+                    <div class="operator">< (menor)</div>
+                    <div class="operator">>= (maior ou igual)</div>
+                    <div class="operator"><= (menor ou igual)</div>
+                    <div class="operator">== (igual)</div>
+                    <div class="operator">!= (diferente)</div>
+                </div>
+                
+                <h3>Lógicos</h3>
+                <div class="operator-grid">
+                    <div class="operator">&& (E)</div>
+                    <div class="operator">|| (OU)</div>
+                    <div class="operator">! (NÃO)</div>
+                </div>
+            </div>
+            
+            <!-- Estruturas de Controle -->
+            <div class="card">
+                <h2>Estruturas de Controle</h2>
+                
+                <h3>Condicionais</h3>
+                <ul>
+                    <li><code class="destaque">if/else</code> - Execução condicional</li>
+                    <li><code class="destaque">switch</code> - Múltiplas condições</li>
+                </ul>
+                
+                <h3>Laços de Repetição</h3>
+                <ul>
+                    <li><code class="destaque">for</code> - Número conhecido de repetições</li>
+                    <li><code class="destaque">while</code> - Enquanto condição for verdadeira</li>
+                    <li><code class="destaque">do...while</code> - Executa pelo menos uma vez</li>
+                </ul>
+                
+                <div class="highlight">
+                    <p><strong>Exemplo for:</strong></p>
+                    <pre><code>for(let i = 0; i < 5; i++) { console.log(i); }</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="test">
+        <h2 class="titulos-exercicios">EXERCÍCIOS</h2>
+        
+        <div class="slider">
+
+            <!-- exercício 1 -->
+            <div class="item l1-ex1">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 1</h3>
+                    <h6>Calcule a diferença entre 2 números</h6>
+                </div>
+
+                
+                <!-- formulário -->
+                <form id="l1-ex1-input">
+                    <div>
+                        <label for="numero1">Digite o primeiro número: </label>
+                        <input type="number" id="numero1" required>
+                    </div>
+                    
+                    <div>
+                        <label for="numero2">Digite o segundo número: </label>
+                        <input type="number" id="numero2" required>
+                    </div>
+            
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                </form>
+                
+                <p id="resultado_sub"></p>
+            </div>
+
+
+            <!-- exercício 2 -->
+            <div class="item l1-ex2">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 2</h3>
+                    <h6>Verifique se um numero é parr</h6>
+                </div>
+                
+                <form id="l1-ex2-input">
+                    <div>
+                        <label for="numero">Digite um número: </label>
+                        <input type="number" id="numero" required>
+                    </div>
+            
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                    
+                </form>
+                <p id="resultado_par"></p>
+                
+            </div>
+
+            
+            <!-- exercício 3 -->
+            <div class="item l1-ex3">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 3</h3>
+                    <h6>Veja se o primeiro é múltiplo do segundo</h6>
+                </div>
+                
+                <form id="l1-ex3-input">
+                    <div>
+                        <label for="numero">Digite a primeiro número: </label>
+                        <input type="number" id="primeiraNota" required>
+                    </div>
+
+                    <div>
+                        <label for="numero">Digite a segundo número: </label>
+                        <input type="number" id="segundaNota" required>
+                    </div>
+            
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                </form>
+                <p id="resultado_nota"></p>
+            </div>
+
+
+            <!-- exercícios 4 -->
+            <div class="item l1-ex4">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 4</h3>
+                    <h6>Conversão de celsius para Fahrenheit</h6>
+                </div>
+                
+                <form id="l1-ex4-input">
+                    <div>
+                        <label for="numero">Digite a temperatura em celsius:</label>
+                        <input type="number" id="temp_celsius" required>
+                    </div>
+            
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                </form>
+                <p id="resultado_fahrenheit"></p>
+            </div>
+
+
+            <!-- exercícios 5 -->
+            <div class="item l1-ex5">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 5</h3>
+                    <h6>Calcule a área de um retângulo</h6>
+                </div>
+                
+                <form action="" id="l1-ex5-input">
+                    <div>
+                        <label for="numero">Digite a base:</label>
+                        <input type="number" id="base" required>
+                    </div>
+
+                    <div>
+                        <label for="numero">Digite a altura:</label>
+                        <input type="number" id="altura" required>
+                    </div>
+            
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                </form>
+                <p id="resultado_area"></p>
+            </div>
+
+
+            <!-- exercício 6 -->
+            <div class="item l1-ex6">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 6</h3>
+                    <h6>Verife se você está acima da média e se é uma nota par</h6>
+                </div>
+                
+                <form id="l1-ex6-input">
+                    <div>
+                        <label for="numero">Digite sua primeira nota:</label>
+                        <input type="number" id="primeiraNota" required>
+                    </div>
+                
+                    <div>
+                        <label for="numero">Digite sua segunda nota:</label>
+                        <input type="number" id="segundaNota" required>
+                    </div>
+                
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                </form>
+                
+                <p id="resultado_media"></p>
+            </div>
+
+            <!-- exercício 7 -->
+            <div class="item l1-ex7">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 7</h3>
+                    <h6>Calcule seu IMC</h6>
+                </div>
+                <form id="l1-ex7-input">
+                    <div>
+                        <label for="numero">Digite seu peso:</label>
+                        <input type="number" id="peso_imc" required>
+                    </div>
+
+                    <div>
+                        <label for="numero">Digite sua altura:</label>
+                        <input type="number" id="altura_imc" required>
+                    </div>
+            
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                </form>
+                
+                <p id="resultado_imc"></p>
+            </div>
+
+            <!-- exercício 8 -->
+            <div class="item l1-ex8">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 8</h3>
+                    <h6>Verifique se um ano é bissexto</h6>
+                </div>
+                <form action="" id="l1-ex8-input">
+                    <div>
+                        <label for="numero">Digite um ano:</label>
+                        <input type="number" id="ano" required>
+                    </div>
+            
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                </form>
+                <p id="resultado_ano"></p>
+            </div>
+
+            <!-- exercício 9 -->
+            <div class="item l1-ex9">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 9</h3>
+                    <h6>Conversão de moedas</h6>
+                </div>
+                <form id="l1-ex9-input">
+                    <div>
+                        <label for="real">Digite o valor em R$:</label>
+                        <input type="number" id="real" required>
+                    </div>
+                    
+                    <div class="custom-select">
+                        <label for="moeda">Escolha uma moeda:</label>
+                        <select name="moedas" id="moeda" required>
+                            <option value="none">Selecione</option>
+                            <option value="dolar">Dólar (USD$)</option>
+                            <option value="euro">Euro (EUR€)</option>
+                        </select>
+                    </div>
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                </form>
+                <p id="resultado"></p>
+            </div>
+            
+            <!-- Exercício 10 -->
+            <div class="item l1-ex10">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 10</h3>
+                    <h6>Veja a tabuada de um número</h6>
+                </div>
+                <form id="l1-ex10-input">
+                    <div>
+                        <label for="numero">Escolha um número:</label>
+                        <input type="number" id="numero_tabuada" required>
+                    </div>
+                    
+                    <div>
+                        <textarea name="" id="tabuada" placeholder="Sua tabuada será gerada aqui..." readonly></textarea>
+                    </div>
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                </form>
+            </div>
+
+            <!-- Exercício 11 -->
+            <div class="item l1-ex11">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 11</h3>
+                    <h6>Pedra, papel e tesoura!</h6>
+                </div>
+                <form id="l1-ex11-input">
+                    <div>
+                        <label for="jogador">Escolha a sua jogada:</label>
+                        <select id="jogador">
+                            <option value="Pedra">Pedra</option>
+                            <option value="Papel">Papel</option>
+                            <option value="Tesoura">Tesoura</option>
+                        </select>
+                    </div>
+                    
+                    <input id="button" class="botao" type="submit" value="Jogar">
+                </form>
+                <p id="resultado_jogo"></p>
+            </div>
+
+            <!-- Exercício 12 -->
+            <div class="item l1-ex12">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 12</h3>
+                    <h6>Calcule o fatorial!</h6>
+                </div>
+                
+                <form id="l1-ex12-input">
+                    <div>
+                        <label for="numero">Digite um número:</label>
+                        <input type="number" id="numero_fatorial" required min="0" step="1">
+                    </div>
+                
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                </form>
+                
+                <p id="resultado_fatorial"></p>
+            </div>
+            
+            <button id="prev">Anterior</button>
+            <button id="next">Próximo</button>
+        </div>
+    </section>
+
+    <script src="scripts/carrossel.js"></script>
+    <script src="scripts/exercicios/lista1/L1-ex01.js"></script>
+    <script src="scripts/exercicios/lista1/L1-ex02.js"></script>
+    <script src="scripts/exercicios/lista1/L1-ex03.js"></script>
+    <script src="scripts/exercicios/lista1/L1-ex04.js"></script>
+    <script src="scripts/exercicios/lista1/L1-ex05.js"></script>
+    <script src="scripts/exercicios/lista1/L1-ex06.js"></script>
+    <script src="scripts/exercicios/lista1/L1-ex07.js"></script>
+    <script src="scripts/exercicios/lista1/L1-ex08.js"></script>
+    <script src="scripts/exercicios/lista1/L1-ex09.js"></script>
+    <script src="scripts/exercicios/lista1/L1-ex10.js"></script>
+    <script src="scripts/exercicios/lista1/L1-ex11.js"></script>
+    <script src="scripts/exercicios/lista1/L1-ex12.js"></script>
+</body>
+</html>
