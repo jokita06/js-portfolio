@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções e DOM em JavaScript</title>
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/exercicios.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/conteudos.css">
+</head>
+<body class="pagina-aula">
+
+    <a class="seta" href="index.html#titulo-seletor">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+    </a>
+
+    <section class="container-aula">
+        <h1 class="titulo-aula">Funções e DOM em JavaScript</h1>
+        
+        <div class="content-column">
+            <div class="card">
+                <h2>Funções em JavaScript</h2>
+                
+                <h3>O que são Funções?</h3>
+                <ul>
+                    <li>Blocos de código reutilizáveis</li>
+                    <li>Executam tarefas específicas</li>
+                    <li>Tornam o código mais organizado</li>
+                    <li>Podem receber parâmetros e retornar valores</li>
+                </ul>
+                
+                <h3>Tipos de Funções</h3>
+                <div class="highlight">
+                    <h4>1. Função Declarada</h4>
+                    <pre><code>function saudacao(nome) {
+        return "Olá, " + nome;
+    }</code></pre>
+                    
+                    <h4>2. Função Anônima</h4>
+                    <pre><code>const quadrado = function(x) {
+        return x * x;
+    };</code></pre>
+                    
+                    <h4>3. Arrow Function</h4>
+                    <pre><code>const dobrar = x => x * 2;</code></pre>
+                </div>
+            </div>
+            
+            <!-- DOM -->
+            <div class="card">
+                <h2>DOM (Document Object Model)</h2>
+                
+                <h3>O que é o DOM?</h3>
+                <ul>
+                    <li>Representação da estrutura do documento HTML</li>
+                    <li>Interface para manipulação da página</li>
+                    <li>Permite alterar conteúdo, estrutura e estilo</li>
+                </ul>
+                
+                <h3>Métodos para Acessar Elementos</h3>
+
+                <div class="method">
+                    <code>getElementById</code>
+                </div>
+
+                <div class="method">
+                    <code>getElementsByClassName</code>
+                </div>
+
+                <div class="method">
+                    <code>getElementsByTagName</code>
+                </div>
+
+                <div class="method">
+                    <code>querySelector</code>
+                </div>
+
+                <div class="method">
+                    <code>querySelectorAll</code>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="test">
+        <h2 class="titulos-exercicios">EXERCÍCIOS</h2>
+
+        <div class="slider">
+
+            <!-- Exercício 1 -->
+            <div class="item l2-ex1">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 1</h3>
+                    <h6>Calculadora</h6>
+                </div>
+
+                <form id="l2-ex1-input">
+                    <div>
+                        <label for="numero1">Número 1:</label>
+                        <input type="number" id="numero1" required>
+                    </div>
+
+                    <div>
+                        <label for="numero2">Número 2:</label>
+                        <input type="number" id="numero2" required>
+                    </div>
+                    
+                    <div class="btns-calculadora">
+                        <input id="somar" class="btn-calculadora" type="submit" value="+">
+                        <input id="subtrair" class="btn-calculadora" type="submit" value="-">
+                        <input id="multiplicar" class="btn-calculadora" type="submit" value="x">
+                        <input id="dividir" class="btn-calculadora" type="submit" value="÷">
+                    </div>
+                    
+
+                    <p id="resultado"></p>
+                </form>
+            </div>
+
+            <!-- Exercício 2 -->
+            <div class="item l2-ex2">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 2</h3>
+                    <h6>Inverta um texto</h6>
+                </div>
+
+                <form id="l2-ex2-input">
+                    <div>
+                        <label>Escreva uma frase:</label>
+                        <input type="text" id="frase" required>
+                    </div>
+
+                    <input id="button" class="botao" type="submit" value="Inverter">
+                    
+                </form>
+                <p id="resultado_texto"></p>
+                
+            </div>
+
+            <!-- Exercício 3 -->
+            <div class="item l2-ex3">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 3</h3>
+                    <h6>Imprima seu nome separadamente</h6>
+                </div>
+
+                <form id="l2-ex3-input">
+                    <div>
+                        <label>Escreva seu nome:</label>
+                        <input type="text" id="nome" required>
+                    </div>
+
+                    <input id="button" class="botao" type="submit" value="Gerar">
+                    
+                </form>
+                <p id="resultado_nome"></p> 
+            </div>
+
+            <!-- Exercício 4 -->
+            <div class="item l2-ex4">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 4</h3>
+                    <h6>Veja se você pode tirar CNH</h6>
+                </div>
+
+                <form id="l2-ex4-input">
+                    <div>
+                        <label>Quantos anos você tem?</label>
+                        <input type="number" id="idade" required>
+                    </div>
+
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                    
+                </form>
+                <p id="resultado_cnh"></p> 
+            </div>
+            
+            <!-- Exercício 5 -->
+            <div class="item l2-ex5">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 5</h3>
+                    <h6>Ordem crescente</h6>
+                </div>
+
+                <form id="l2-ex5-input">
+                    <div class="test">
+                        <input type="number" id="numeros" placeholder="Digite 3 números">
+                        <input id="adicionar" class="botao" type="submit" value="Adicionar">
+                    </div>
+
+                    
+                    <input id="ordenar" class="botao" type="submit" value="Ordenar">
+                    
+                </form>
+                <p id="resultado_ordenacao"></p>
+                
+            </div>
+
+            <!-- Exercício 6 -->
+            <div class="item l2-ex6">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 6</h3>
+                    <h6>Converta horas para minutos</h6>
+                </div>
+
+                <form id="l2-ex6-input">
+                    <div>
+                        <label>Escreva as horas:</label>
+                        <input type="number" id="horas" required>
+                    </div>
+
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                    
+                </form>
+                <p id="resultado_min"></p>
+                
+            </div>
+
+            <!-- Exercício 7 -->
+            <div class="item l2-ex7">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 7</h3>
+                    <h6>Veja quantas cédulas em reais você precisa</h6>
+                </div>
+
+                <form id="l2-ex7-input">
+                    <div>
+                        <label>Digite um valor em R$:</label>
+                        <input type="number" id="valor" required>
+                    </div>
+
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                    
+                </form>
+                <p id="resultado_cedulas"></p>
+                
+            </div>
+
+             <!-- Exercício 8 -->
+             <div class="item l2-ex8">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 8</h3>
+                    <h6>Raiz quadrada</h6>
+                </div>
+
+                <form id="l2-ex8-input">
+                    <div>
+                        <label>Digite um número:</label>
+                        <input type="number" id="numero" required>
+                    </div>
+
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                    
+                </form>
+                <p id="resultado_raiz"></p>
+                
+            </div>
+
+            <!-- Exercício 9 -->
+            <div class="item l2-ex9">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 9</h3>
+                    <h6>Faça seu cadastro</h6>
+                </div>
+
+                <form id="l2-ex9-input">
+                    <div>
+                        <input type="text" id="numero" placeholder="Nome" required>
+                    </div>
+
+                    <div>
+                        <input type="text" id="numero" placeholder="Endereço" >
+                    </div>
+
+                    <div>
+                        <input type="text" id="numero" placeholder="Telefone" >
+                    </div>
+
+                    <div>
+                        <input type="text" id="numero" placeholder="Celular" >
+                    </div>
+
+                    <div>
+                        <input type="text" id="numero" placeholder="E-mail" >
+                    </div>
+
+                    <input id="button" class="botao" type="submit" value="Enviar">
+                    
+                </form>
+                <p id="resultado_raiz"></p>
+                
+            </div>
+
+            <!-- Exercício 10 -->
+            <div class="item l2-ex10">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 10</h3>
+                    <h6>Calcule o Imposto de Renda </h6>
+                </div>
+
+                <form id="l2-ex10-input">
+                    <div>
+                        <label>Digite seu sálario:</label>
+                        <input type="number" id="salario" placeholder="R$" required>
+                    </div>
+
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                    
+                </form>
+                <p id="resultado_imposto"></p>
+                
+            </div>
+
+            <!-- Exercício 11 -->
+            <div class="item l2-ex11">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 11</h3>
+                    <h6>Calcule o INSS</h6>
+                </div>
+
+                <form id="l2-ex11-input">
+                    <div>
+                        <label>Digite seu sálario:</label>
+                        <input type="number" id="base_salarial" placeholder="R$" required>
+                    </div>
+
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                    
+                </form>
+                <p id="resultado_inss"></p>
+            </div>
+
+            <!-- Exercício 12 -->
+            <div class="item l2-ex12">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 12</h3>
+                    <h6>Juros composto</h6>
+                </div>
+
+                <form id="l2-ex12-input">
+                    <div>
+                        <label>Digite o capital inicial:</label>
+                        <input type="number" id="capital" placeholder="R$" required>
+                    </div>
+
+                    <div>
+                        <label>Digie o período (mês):</label>
+                        <input type="number" id="periodo" required>
+                    </div>
+
+                    <div>
+                        <label>Digite a taxa (%):</label>
+                        <input type="number" id="taxa" required>
+                    </div>
+
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                    
+                </form>
+                <p id="resultado_juros"></p>
+            </div>
+
+            <!-- Exercício 13 -->
+            <div class="item l2-ex13">
+                <div class="exercicio_e_descricao">
+                    <h3>Exercício 13</h3>
+                    <h6>Juros Simples</h6>
+                </div>
+
+                <form id="l2-ex13-input">
+                    <div>
+                        <label>Digite o capital inicial:</label>
+                        <input type="number" id="valor_inicial" placeholder="R$" required>
+                    </div>
+                
+                    <div>
+                        <label>Digite o período (mês):</label>
+                        <input type="number" id="periodo_simples" required>
+                    </div>
+                
+                    <div>
+                        <label>Digite a taxa (%):</label>
+                        <input type="number" id="taxa_simples" required>
+                    </div>
+                
+                    <input id="button" class="botao" type="submit" value="Calcular">
+                </form>
+                <p id="resultado_financiamento"></p>
+                
+            </div>
+
+            <button id="prev">Anterior</button>
+            <button id="next">Próximo</button>
+        </div>
+    </section>
+
+    <script src="scripts/carrossel.js"></script>
+    <script src="scripts/exercicios/lista2/L2-ex01.js"></script>
+    <script src="scripts/exercicios/lista2/L2-ex02.js"></script>
+    <script src="scripts/exercicios/lista2/L2-ex03.js"></script>
+    <script src="scripts/exercicios/lista2/L2-ex04.js"></script>
+    <script src="scripts/exercicios/lista2/L2-ex05.js"></script>
+    <script src="scripts/exercicios/lista2/L2-ex06.js"></script>
+    <script src="scripts/exercicios/lista2/L2-ex07.js"></script>
+    <script src="scripts/exercicios/lista2/L2-ex08.js"></script>
+    <script src="scripts/exercicios/lista2/L2-ex09.js"></script>
+    <script src="scripts/exercicios/lista2/L2-ex10.js"></script>
+    <script src="scripts/exercicios/lista2/L2-ex11.js"></script>
+    <script src="scripts/exercicios/lista2/L2-ex12.js"></script>
+    <script src="scripts/exercicios/lista2/L2-ex13.js"></script>
+</body>
+</html>

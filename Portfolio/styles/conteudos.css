@@ -1,0 +1,116 @@
+@import url(colors.css);
+
+.pagina-aula {
+    margin: 0 auto;
+    line-height: 1.6;
+    margin: 15px ;
+}
+
+.container-aula {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.titulo-aula {
+    color: var(--branco);
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--azul-claro);
+    font-size: 30px;
+}
+
+.content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card {
+    background-color: var(--containers);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--sombra);
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--sombra);
+}
+
+.card h2 {
+    color: var(--branco);
+    margin-top: 0;
+    padding-bottom: 10px;
+}
+
+.card h3 {
+    color: rgb(194, 219, 247);
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: 440;
+}
+
+.card h5 {
+    color: var(--azul-escuro);
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 12px;
+    color: var(--texto);
+}
+
+code {
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-family: "Poppins", serif;
+    color: var(--preto);
+    font-weight: 600;
+}
+
+.highlight {
+    background-color: var(--cor-destaque);
+    padding: 15px;
+    border-left: 4px solid #0e203a;
+    border-radius: 0 4px 4px 0;
+    margin: 15px 0;
+}
+
+.operator-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.operator {
+    padding: 8px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.destaque, .operator {
+    background-color: var(--cor-destaque);
+}        
+
+.method {
+    margin: 10px 0;
+    padding: 10px;
+    background: var(--cor-destaque);
+    border-radius: 5px;
+}
+
+.componentes {
+    color: var(--azul-escuro);
+}
+
+.seta {
+    position: fixed;
+}
